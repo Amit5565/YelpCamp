@@ -1,0 +1,12 @@
+.img-responsive{
+  width: 100%;
+}
+.thumbnail{
+  padding: 0px;
+}
+.caption-full{
+  padding: 9px;
+}
+#left{
+  display: inline;
+}
