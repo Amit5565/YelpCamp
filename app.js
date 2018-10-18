@@ -15,8 +15,9 @@ var commentRoutes      =require('./routes/comments'),
     authRoutes         =require('./routes/auth');
 var methodOverride     =require('method-override');
 
-mongoose.connect("mongodb://localhost/yelpcamp",{useNewUrlParser:true});
-
+//mongoose.connect("mongodb://localhost/yelpcamp",{useNewUrlParser:true});
+mongoose.connect("mongodb://Amit:5565Amit5565@ds215822.mlab.com:15822/yelcampv11");
+//mongodb://Amit:5565Amit5565@ds215822.mlab.com:15822/yelcampv11
 app.use(bodyparser.urlencoded({extended:true}));
 app.set("view engine","ejs");
 app.use(express.static("public"));
@@ -50,7 +51,7 @@ app.use(function(req,res,next){
 app.use(authRoutes);
 app.use("/campgrounds/:id/comments",commentRoutes);
 app.use("/campgrounds",campgroundRoutes);
-app.listen(process.env.PORT,process.env.IP,function(err){
+app.listen(9000,function(err){
   if(err){
     console.log("Errrrrrr");
   }
