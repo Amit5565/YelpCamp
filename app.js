@@ -51,7 +51,7 @@ app.use(function(req,res,next){
 app.use(authRoutes);
 app.use("/campgrounds/:id/comments",commentRoutes);
 app.use("/campgrounds",campgroundRoutes);
-app.listen(9000,function(err){
+app.listen(process.env.PORT,process.env.IP,function(err){
   if(err){
     console.log("Errrrrrr");
   }
